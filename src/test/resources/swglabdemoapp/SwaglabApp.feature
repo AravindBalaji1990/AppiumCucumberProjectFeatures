@@ -1,11 +1,13 @@
 Feature:  Validate the login for Swag lab app
 
-  @swaglab
-  Scenario Outline: validate the different sets of data but with same scenario
+  Background:
     Given User opens the swaglab app
-    And User enters the <username> and <password>
-    Then User validates the dashbaord of the app
-    Then User close the swaglab app
+
+
+  @swaglab
+  Scenario Outline: validate the different sets of data but with same scenario with data <username>
+    When User enters the <username> and <password>
+    And User validates the dashbaord of the app
 
     Examples:
       | username        | password     |

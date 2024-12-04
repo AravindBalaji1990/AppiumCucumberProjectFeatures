@@ -12,7 +12,9 @@ import org.junit.runner.RunWith;
         dryRun = false,
         plugin = {"pretty","html:cucumber-report.html"},
         monochrome = true,
-        tags = "@swaglab"
+//        tags = "@swaglab and  @apidemo" // this will fail as no scenario has both tags
+//        tags = "@swaglab or  @apidemo" // this will run as we have seprate scenario for the tags
+        tags = "@swaglab and not  @apidemo" // this will runonly swag lab
 )
 public class TestRunner {
 
